@@ -66,14 +66,6 @@ bool Matrix::check_square() {
 	if (size.first == size.second) return true;
 	return false;
 }
-void Matrix::set_elem(int row, int col, double val) {
-	if (!check_range(row, col)) { std::cout << "Index out of range " << row << " " << col << std::endl; return; }
-	A[row][col] = val;
-}
-double Matrix::get_elem(int row, int col) {
-	if (!check_range(row, col)) { std::cout << "Index out of range " << row << " " << col << std::endl; return NULL; }
-	return A[row][col];
-}
 void Matrix::print() {
 	for (int i = 0; i < size.first; i++) {
 		for (int j = 0; j < size.second; j++) { std::cout << std::setw(4) << A[i][j] << " "; }

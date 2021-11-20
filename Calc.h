@@ -42,12 +42,11 @@ public:
 	void run();
 };
 class Matrix : public Calc {
-protected:
+private:
 	matrix A;
 	matrix lower;
 	matrix upper;
 	std::pair<int, int> size;
-private:
 	int sq_size = 0;
 	void clear();
 	void identity();
@@ -61,8 +60,6 @@ public:
 	Matrix();
 	bool check_range(int row, int col);
 	bool check_square();
-	void set_elem(int row, int col, double val);
-	double get_elem(int row, int col);
 	void print();
 	void print_lu();
 	std::pair<int, int> get_size();
@@ -79,7 +76,6 @@ public:
 	int rank();
 };
 class Vector {
-protected:
 private:
 	vector V;
 	int size;
